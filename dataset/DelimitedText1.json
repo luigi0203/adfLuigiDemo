@@ -1,0 +1,41 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "NIC que no estan en contratos.csv",
+				"folderPath": "ventas",
+				"container": "rawdatalp"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "NIT",
+				"type": "String"
+			},
+			{
+				"name": "NIC",
+				"type": "String"
+			},
+			{
+				"name": "OPERADOR_RED",
+				"type": "String"
+			},
+			{
+				"name": "ORIGEN",
+				"type": "String"
+			}
+		]
+	}
+}
